@@ -1,0 +1,27 @@
+{
+  "name": "read-me-generator",
+  "version": "1.0.0",
+  "description": "Generates a README.md file for your project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JacobBlack1/Readme-gen"
+  },
+  "keywords": [
+    "Readme",
+    "Generator",
+    "README.md"
+  ],
+  "author": "Jacob Black",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobBlack1/Readme-gen/issues"
+  },
+  "homepage": "https://github.com/JacobBlack1/Readme-gen#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
