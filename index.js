@@ -31,57 +31,66 @@ try {
 function getInfo() {
   inquirer
     .prompt([
+      //Title
       {
         type: "input",
-        message: "What is the name of your project?",
-        name: "name"
+        message: "What is your projects name?",
+        name: "title"
       },
+      //description
       {
         type: "input",
         message: "Enter a description for your project.",
         name: "description"
       },
-      {
-        type: "editor",
-        message: "Enter installation instructions.",
-        name: "install"
-      },
+      //installation
       {
         type: "input",
-        message: "Enter usage information.",
+        message: "What are the instructions to install this project. Enter None if their aren't any.",
+        name: "installation"
+      },
+      //Usage
+      {
+        type: "input",
+        message: "How is your project used",
         name: "usage"
       },
+      //test
       {
         type: "input",
-        message: "How can others contribute?",
-        name: "contribute"
+        message: "What are the Test instuctions?",
+        name: "test"
       },
+      //contribution
       {
         type: "input",
         message: "How can this code be tested?",
         name: "test"
       },
+      //checkbox
       {
-        type: "list",
-        message: "What licence is relevant to this project?",
+        type: "checkbox",
+        message: "select a licence",
         name: "licence",
-        choices: ["MIT", "Apache", "GPLv3"]
+        choices: [
+          "MIT",
+         "Apache", 
+         "GPLv3",
+         "None"
+        ]
       },
+      //GitHub user
       {
         type: "input",
-        message: "what is your Github username?",
+        message: " your Github username_______",
         name: "username"
       },
+      //Email
       {
         type: "input",
-        message: "what is your email address?",
+        message: "your email address?",
         name: "email"
       },
-      {
-        type: "input",
-        message: "Enter your image url (https://github.com/your-repository/...)",
-        name: "image"
-      }
     ])
     // Receives response from questions
     .then(function (response) {
@@ -98,6 +107,8 @@ function getInfo() {
         $template += `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)\n\n`;
         licenceInfo = '(http://www.gnu.org/licenses/gpl-3.0.html)\n\nYou have the freedom to run, study, share, and modify this permissive software. Anyone who acquires this software must make it available to anyone else under the same licensing agreement.\n\n';
       };      
+     
+     
       $template += `### Table of Contents\n\n- [Description](#description)\n- [Installation](#installation)\n- [Usage](#usage)\n- [Contributing](#contributing)\n- [Testing](#testing)\n- [Questions](#questions)\n- [License](#license)\n- [Application Image](#application-image)\n\n`;
       $template += `## Description\n\n${response.description}\n\n`;
       $template += `## Installation\n\n${response.install}\n\n`;
