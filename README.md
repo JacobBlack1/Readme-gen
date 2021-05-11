@@ -9,7 +9,7 @@
 - [Testing](#testing)
 - [Questions](#questions)
 - [License](#license)
-- [Application Image](#application-image)
+
 
 ## Description
 
@@ -41,6 +41,4 @@ If you have any questions feel free to contact me here:
 
 ## License
 
-[]## Application Image
 
- ![Image of Application](undefined)
